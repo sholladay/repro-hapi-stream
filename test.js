@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { PassThrough } from 'stream';
 import test from 'ava';
 import FormData from 'form-data';
 import server from '.';
@@ -12,10 +13,10 @@ test('responds to multipart/form-data streams', async (t) => {
         method  : 'POST',
         url     : '/cats',
         headers : form.getHeaders(),
-        payload : form
+        payload : form.pipe(new PassThrough())
     });
     t.is(response.statusCode, 200);
     t.is(response.statusMessage, 'OK');
-    t.is(response.headers['content-type'], 'text/plain');
+    t.is(response.headers['content-type'], 'text/html; charset=utf-8');
     t.is(response.payload, 'A pretty kitty in image/png format');
 });
