@@ -1,0 +1,57 @@
+{
+    "name": "repro-hapi-stream",
+    "version": "0.0.0",
+    "description": "Reproduce stream testing problem with hapi",
+    "homepage": "https://github.com/sholladay/repro-hapi-stream",
+    "main": "index.js",
+    "author": {
+        "name": "Seth Holladay",
+        "url": "https://seth-holladay.com",
+        "email": "me@seth-holladay.com"
+    },
+    "scripts": {
+        "start": "node cli.js",
+        "test": "xo && ava"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:sholladay/repro-hapi-stream.git"
+    },
+    "bugs": {
+        "url": "https://github.com/sholladay/repro-hapi-stream/issues",
+        "email": "me@seth-holladay.com"
+    },
+    "engines": {
+        "node": ">=8"
+    },
+    "license": "MPL-2.0",
+    "bin": "cli.js",
+    "files": [
+        "lib",
+        "index.js",
+        "cli.js"
+    ],
+    "dependencies": {
+        "boom": "^7.1.1",
+        "content": "^4.0.3",
+        "hapi": "^17.2.0",
+        "inert": "^5.1.0",
+        "joi": "^13.1.2",
+        "meow": "^4.0.0",
+        "port-type": "^0.2.1",
+        "throw-rejects": "^1.0.0"
+    },
+    "devDependencies": {
+        "ava": "^0.25.0",
+        "eslint-config-tidy": "^0.6.2",
+        "form-data": "^2.3.1",
+        "xo": "git@github.com:sindresorhus/xo.git#7c77af3cc036bf488f0b5b87e37fad9913e1a5f5"
+    },
+    "keywords": [
+        "cli-app",
+        "cli"
+    ],
+    "xo": {
+        "extend": "tidy"
+    }
+}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>Upload a cat</title>
+    </head>
+    <body>
+        <p>Upload a cat:</p>
+        <form enctype="multipart/form-data" method="POST" action="/cats">
+            <input name="description" type="text">
+            <input name="image" type="file">
+            <button>Submit</button>
+        </form>
+    </body>
+</html>
